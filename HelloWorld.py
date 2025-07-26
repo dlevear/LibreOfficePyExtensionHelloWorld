@@ -9,27 +9,19 @@ from com.sun.star.task import XJobExecutor
 from com.sun.star.document import XEventListener
 
 
-class TuesdayPrinter(unohelper.Base, XJobExecutor, XEventListener):
-    """A service only printing on Tuesdays
-
-    Its important that this service implements this interface:
-        - https://api.libreoffice.org/docs/common/ref/com/sun/star/task/XJobExecutor.html
-    has a trigger function. Because of that, it can be used in menus and toolbars, by using:
-
-        service:org.libreoffice.TuesdayPrinter
-
-    as a URL.
+class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
+    """
+    Write a Python comment here
     """
     def trigger(self, args):
-        if args == "printontuesday":
-            frame = self.desktop.ActiveFrame
-            window = frame.ContainerWindow
-            window.Toolkit.createMessageBox(
-                window,
-                uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
-                uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
-                "HelloWorld",
-                "Hello World!").execute()
+        frame = self.desktop.ActiveFrame
+        window = frame.ContainerWindow
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Hello World!").execute()
     # boilerplate code below this point
     def __init__(self, context):
         self.context = context
@@ -50,6 +42,6 @@ class TuesdayPrinter(unohelper.Base, XJobExecutor, XEventListener):
 
 g_ImplementationHelper = unohelper.ImplementationHelper()
 g_ImplementationHelper.addImplementation(
-    TuesdayPrinter,
-    "org.libreoffice.TuesdayPrinter",
+    HelloWorld,
+    "org.libreoffice.HelloWorld",
     ("com.sun.star.task.JobExecutor",))

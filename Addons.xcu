@@ -12,10 +12,10 @@
         <node oor:name="OfficeMenuBarMerging">
             <!--
                 We modify the menu here to replace the entry File->Print with our own
-                calling the org.libreoffice.TuesdayPrinter service.
+                calling the org.libreoffice.HelloWorld service.
                 see https://opengrok.libreoffice.org/xref/core/framework/source/uielement/menubarmerger.cxx for the gory details
             -->
-            <node oor:name="org.libreoffice.TuesdayPrinter.menus" oor:op="replace">
+            <node oor:name="org.libreoffice.HelloWorld.menus" oor:op="replace">
                 <node oor:name="menu1" oor:op="replace">
                     <prop oor:name="MergePoint">
                         <!--
@@ -40,7 +40,7 @@
                                     service is implemented in TuesdayPrinter.py
                                     see https://opengrok.libreoffice.org/search?q=ServiceHandler%3A%3Aimplts_dispatch&project=core for the gory details
                                 -->
-                                <value>service:org.libreoffice.TuesdayPrinter?printontuesday</value>
+                                <value>service:org.libreoffice.HelloWorld</value>
                             </prop>
                             <prop oor:name="ImageIdentifier" oor:type="xs:string">
                                 <value>%origin%/images/play-next-button-green-icon</value>
@@ -70,10 +70,10 @@
                 We modify the toolbar here to replace the:
                  - print button on the standard toolbar with our own implementation
                  - print button on the preview toolbar with our own implementation
-                calling the org.libreoffice.TuesdayPrinter service.
+                calling the org.libreoffice.HelloWorld service.
                 see https://opengrok.libreoffice.org/xref/core/framework/source/uielement/toolbarmerger.cxx for the gory details
             -->
-            <node oor:name="org.libreoffice.TuesdayPrinter.standardbar" oor:op="replace">
+            <node oor:name="org.libreoffice.HelloWorld.standardbar" oor:op="replace">
                 <node oor:name="toolbar1" oor:op="replace">
                     <prop oor:name="MergeToolBar">
                         <!--
@@ -90,7 +90,7 @@
                     <node oor:name="ToolBarItems">
                         <node oor:name="button1" oor:op="replace">
                             <prop oor:name="URL" oor:type="xs:string">
-                                <value>service:org.libreoffice.TuesdayPrinter?printontuesday</value>
+                                <value>service:org.libreoffice.HelloWorld</value>
                             </prop>
                             <prop oor:name="ImageIdentifier" oor:type="xs:string">
                                 <value>%origin%/images/play-next-button-green-icon</value>
@@ -106,7 +106,7 @@
                     </node>
                 </node>
             </node>
-            <node oor:name="org.libreoffice.TuesdayPrinter.previewobjectbar" oor:op="replace">
+            <node oor:name="org.libreoffice.HelloWorld.previewobjectbar" oor:op="replace">
                 <node oor:name="toolbar1" oor:op="replace">
                     <prop oor:name="MergeToolBar">
                         <!--
@@ -123,7 +123,7 @@
                     <node oor:name="ToolBarItems">
                         <node oor:name="button1" oor:op="replace">
                             <prop oor:name="URL" oor:type="xs:string">
-                                <value>service:org.libreoffice.TuesdayPrinter?printontuesday</value>
+                                <value>service:org.libreoffice.HelloWorld</value>
                             </prop>
                             <prop oor:name="ImageIdentifier" oor:type="xs:string">
                                 <value>%origin%/images/play-next-button-green-icon</value>

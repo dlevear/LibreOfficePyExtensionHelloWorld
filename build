@@ -11,6 +11,8 @@ extensionname = open(
 with ZipFile(extensionname, 'w') as tuesdayzip:
     os.chdir(scriptdir)
     for root, dirs, files in os.walk('.'):
+        if '.git' in root:
+            continue
         for name in files:
             if not name == extensionname:
                 tuesdayzip.write(os.path.join(root, name))
