@@ -20,7 +20,7 @@
                         <!--
                             For options see e.g. /usr/lib/libreoffice/share/config/soffice.cfg/modules/swriter/menubar/menubar.xml for reference
                         -->
-                        <value>.uno:PickList\.uno:Cut</value>
+                        <value>.uno:EditMenu\.uno:Cut</value>
                     </prop>
                     <prop oor:name="MergeCommand">
                         <!--
