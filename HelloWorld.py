@@ -22,7 +22,7 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
             uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
             "HelloWorld",
             "Hello World! After you click OK, I will write Hello world in cell A1").execute()
-        document = self.context.getDocument()
+        document = self.document
         window.Toolkit.createMessageBox(
             window,
             uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
