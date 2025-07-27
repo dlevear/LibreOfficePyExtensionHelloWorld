@@ -30,7 +30,7 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
             uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
             "HelloWorld",
             "Got desktop successfully. Its type is {}. Here is everything it can do: {}".format(type(desktop), desktopdir)).execute()
-        controller = desktop.getController()
+        controller = desktop.Controller
         controllerdir = " ".join(dir(controller))
         window.Toolkit.createMessageBox(
             window,
