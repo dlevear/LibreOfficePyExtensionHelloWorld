@@ -29,13 +29,13 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
             uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
             "HelloWorld",
             "Got document successfully").execute()
-        sheet = document.getCurrentController().ActiveSheet
+        sheet = document.getSheets()[0]
         window.Toolkit.createMessageBox(
             window,
             uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
             uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
             "HelloWorld",
-            "Got sheet successfully").execute()
+            "Got first sheet successfully").execute()
         sheet.getCellByPosition(0,0).setString("Hello world")
         window.Toolkit.createMessageBox(
             window,
