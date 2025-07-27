@@ -29,7 +29,15 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
             uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
             uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
             "HelloWorld",
-            "Got document successfully. Here is everything it can do: {}".format(documentdir)).execute()
+            "Got document successfully. Its type is {}. Here is everything it can do: {}".format(type(document), documentdir)).execute()
+        desktop = self.desktop
+        desktopdir = " ".join(dir(desktop))
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Got desktop successfully. Its type is {}. Here is everything it can do: {}".format(type(desktop), desktopdir)).execute()
         sheet = document.getSheets()[0]
         window.Toolkit.createMessageBox(
             window,
