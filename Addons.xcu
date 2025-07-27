@@ -52,8 +52,8 @@
                                 <value>_self</value>
                             </prop>
                             <prop oor:name="Title" oor:type="xs:string">
-                                <value xml:lang="en-US">Print on Tuesdays</value>
-                                <value>Print on Tuesdays</value>
+                                <value xml:lang="en-US">Click me, English speakers</value>
+                                <value>Click me</value>
                             </prop>
                         </node>
                     </node>
@@ -96,8 +96,8 @@
                                 <value>_self</value>
                             </prop>
                             <prop oor:name="Title" oor:type="xs:string">
-                                <value xml:lang="en-US">Print on Tuesdays</value>
-                                <value>Print on Tuesdays</value>
+                                <value xml:lang="en-US">Click me standard toolbar, English speakers</value>
+                                <value>Click me standard toolbar</value>
                             </prop>
                         </node>
                     </node>
@@ -129,8 +129,8 @@
                                 <value>_self</value>
                             </prop>
                             <prop oor:name="Title" oor:type="xs:string">
-                                <value xml:lang="en-US">Print on Tuesdays</value>
-                                <value>Print on Tuesdays</value>
+                                <value xml:lang="en-US">Click me preview toolbar, English speakers</value>
+                                <value>Click me preview toolbar</value>
                             </prop>
                         </node>
                     </node>
