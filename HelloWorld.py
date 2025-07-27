@@ -22,14 +22,6 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
             uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
             "HelloWorld",
             "Hello World! After you click OK, I will write Hello world in cell A1").execute()
-        document = self.document
-        documentdir = " ".join(dir(document))
-        window.Toolkit.createMessageBox(
-            window,
-            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
-            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
-            "HelloWorld",
-            "Got document successfully. Its type is {}. Here is everything it can do: {}".format(type(document), documentdir)).execute()
         desktop = self.desktop
         desktopdir = " ".join(dir(desktop))
         window.Toolkit.createMessageBox(
@@ -38,6 +30,14 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
             uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
             "HelloWorld",
             "Got desktop successfully. Its type is {}. Here is everything it can do: {}".format(type(desktop), desktopdir)).execute()
+        controller = desktop.getController()
+        controllerdir = " ".join(dir(controller))
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Got controller successfully. Its type is {}. Here is everything it can do: {}".format(type(controller), controllerdir)).execute()
         sheet = document.getSheets()[0]
         window.Toolkit.createMessageBox(
             window,
@@ -57,8 +57,8 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
     def __init__(self, context):
         self.context = context
         # see https://api.libreoffice.org/docs/idl/ref/servicecom_1_1sun_1_1star_1_1frame_1_1Desktop.html
-        self.desktop = self.createUnoService("com.sun.star.frame.Desktop")
         self.document = self.createUnoService("com.sun.star.frame.Document")
+        self.desktop = self.createUnoService("com.sun.star.frame.Desktop")
         # see https://api.libreoffice.org/docs/idl/ref/servicecom_1_1sun_1_1star_1_1frame_1_1DispatchHelper.html
         self.dispatchhelper = self.createUnoService("com.sun.star.frame.DispatchHelper")
         frame = self.desktop.ActiveFrame
