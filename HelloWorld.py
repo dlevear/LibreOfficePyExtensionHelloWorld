@@ -22,7 +22,8 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
             uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
             "HelloWorld",
             "Hello World! After you click OK, I will write Hello world in cell A1").execute()
-        sheet = self.document.getCurrentController().ActiveSheet
+        document = XSCRIPTCONTEXT.getDocument()
+        sheet = document.getCurrentController().ActiveSheet
         sheet.getCellByPosition(0,0).setString("Hello world")
         return
     # boilerplate code below this point
