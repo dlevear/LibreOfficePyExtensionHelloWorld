@@ -15,8 +15,8 @@
                 calling the org.libreoffice.HelloWorld service.
                 see https://opengrok.libreoffice.org/xref/core/framework/source/uielement/menubarmerger.cxx for the gory details
             -->
-            <node oor:name="org.libreoffice.HelloWorld.menus" oor:op="replace">
-                <node oor:name="menu1" oor:op="replace">
+            <node oor:name="org.libreoffice.HelloWorld.menus" oor:op="addafter">
+                <node oor:name="menu1" oor:op="addafter">
                     <prop oor:name="MergePoint">
                         <!--
                             File->Print
@@ -28,18 +28,11 @@
                         <!--
                             possible merge commands are: AddAfter, AddBefore, Replace, Remove
                         -->
-                        <value>Replace</value>
-                    </prop>
-                    <prop oor:name="MergeFallback">
                         <value>AddAfter</value>
                     </prop>
                     <node oor:name="MenuItems">
-                        <node oor:name="submenu1" oor:op="replace">
+                        <node oor:name="submenu1" oor:op="addafter">
                             <prop oor:name="URL" oor:type="xs:string">
-                                <!--
-                                    service is implemented in TuesdayPrinter.py
-                                    see https://opengrok.libreoffice.org/search?q=ServiceHandler%3A%3Aimplts_dispatch&project=core for the gory details
-                                -->
                                 <value>service:org.libreoffice.HelloWorld</value>
                             </prop>
                             <prop oor:name="ImageIdentifier" oor:type="xs:string">
@@ -73,8 +66,8 @@
                 calling the org.libreoffice.HelloWorld service.
                 see https://opengrok.libreoffice.org/xref/core/framework/source/uielement/toolbarmerger.cxx for the gory details
             -->
-            <node oor:name="org.libreoffice.HelloWorld.standardbar" oor:op="replace">
-                <node oor:name="toolbar1" oor:op="replace">
+            <node oor:name="org.libreoffice.HelloWorld.standardbar" oor:op="addafter">
+                <node oor:name="toolbar1" oor:op="addafter">
                     <prop oor:name="MergeToolBar">
                         <!--
                             see e.g. /usr/lib/libreoffice/share/config/soffice.cfg/modules/swriter/toolbar/standardbar.xml
@@ -85,10 +78,10 @@
                         <value>.uno:PrintDefault</value>
                     </prop>
                     <prop oor:name="MergeCommand">
-                        <value>Replace</value>
+                        <value>AddAfter</value>
                     </prop>
                     <node oor:name="ToolBarItems">
-                        <node oor:name="button1" oor:op="replace">
+                        <node oor:name="button1" oor:op="addafter">
                             <prop oor:name="URL" oor:type="xs:string">
                                 <value>service:org.libreoffice.HelloWorld</value>
                             </prop>
@@ -106,8 +99,8 @@
                     </node>
                 </node>
             </node>
-            <node oor:name="org.libreoffice.HelloWorld.previewobjectbar" oor:op="replace">
-                <node oor:name="toolbar1" oor:op="replace">
+            <node oor:name="org.libreoffice.HelloWorld.previewobjectbar" oor:op="addafter">
+                <node oor:name="toolbar1" oor:op="addafter">
                     <prop oor:name="MergeToolBar">
                         <!--
                             see e.g. /usr/lib/libreoffice/share/config/soffice.cfg/modules/swriter/toolbar/previewobjectbar.xml
@@ -118,10 +111,10 @@
                         <value>.uno:PrintPagePreView</value>
                     </prop>
                     <prop oor:name="MergeCommand">
-                        <value>Replace</value>
+                        <value>AddAfter</value>
                     </prop>
                     <node oor:name="ToolBarItems">
-                        <node oor:name="button1" oor:op="replace">
+                        <node oor:name="button1" oor:op="addafter">
                             <prop oor:name="URL" oor:type="xs:string">
                                 <value>service:org.libreoffice.HelloWorld</value>
                             </prop>
