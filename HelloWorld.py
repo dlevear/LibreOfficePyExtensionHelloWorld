@@ -23,8 +23,26 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
             "HelloWorld",
             "Hello World! After you click OK, I will write Hello world in cell A1").execute()
         document = self.context.getDocument()
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Got document successfully").execute()
         sheet = document.getCurrentController().ActiveSheet
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Got sheet successfully").execute()
         sheet.getCellByPosition(0,0).setString("Hello world")
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Set cell successfully").execute()
         return
     # boilerplate code below this point
     def __init__(self, context):
@@ -34,6 +52,14 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
         self.document = self.createUnoService("com.sun.star.frame.Document")
         # see https://api.libreoffice.org/docs/idl/ref/servicecom_1_1sun_1_1star_1_1frame_1_1DispatchHelper.html
         self.dispatchhelper = self.createUnoService("com.sun.star.frame.DispatchHelper")
+        frame = self.desktop.ActiveFrame
+        window = frame.ContainerWindow
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Finished initializing").execute()
     def createUnoService(self, name):
         """little helper function to create services in our context"""
         # see https://api.libreoffice.org/docs/idl/ref/servicecom_1_1sun_1_1star_1_1lang_1_1ServiceManager.html
