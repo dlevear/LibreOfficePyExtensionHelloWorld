@@ -22,6 +22,34 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
             uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
             "HelloWorld",
             "Hello World! After you click OK, I will write Hello world in cell A1").execute()
+        context = self.context
+        contextdir = " ".join(dir(context))
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Got context successfully. Its type is {}. Here is everything it can do: {}".format(type(context), contextdir)).execute()
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Here are my globals: {}".format(str(globals()))).execute()
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Here are my locals: {}".format(str(locals()))).execute()
+        document = self.document
+        documentdir = " ".join(dir(document))
+        window.Toolkit.createMessageBox(
+            window,
+            uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
+            uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
+            "HelloWorld",
+            "Got document successfully. Its type is {}. Here is everything it can do: {}".format(type(document), documentdir)).execute()
         desktop = self.desktop
         desktopdir = " ".join(dir(desktop))
         window.Toolkit.createMessageBox(
