@@ -19,7 +19,7 @@
     </publisher>
     <registration>
         <simple-license accept-by="admin" >
-            <license-text xlink:href="description/license.txt" />
+            <license-text xlink:href="LICENSE" />
         </simple-license>
     </registration>
 </description>

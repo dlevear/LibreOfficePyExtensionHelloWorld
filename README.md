@@ -1,5 +1,13 @@
-This is intended to be an extension template for LibreOffice Calc using Python.
+This is a LibreOffice Calc extension written in Python.
 
-A lot of this was adapted from an example called TuesdayPrinter that I found [here](https://git.libreoffice.org/sdk-examples/), which is licensed under MPL. For this reason, this repo is also licensed under MPL.
+It's intended to be a kind of template for me (maybe others). It just creates a Hello World dialog box and sets the contents of cell A1 when you click a button.
 
-For more licensing information, see `description/license.txt`.
+A lot of this was adapted from an example extension called TuesdayPrinter that I found [here](https://git.libreoffice.org/sdk-examples/), which is licensed under MPL. For this reason, this repo is also licensed under MPL.
+
+This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. 
+
+The logo (description/play-next-button-green-icon.png) is from this website:
+
+https://uxwing.com/play-next-button-green-icon/
+
+The logo is used within the terms of its license, see https://uxwing.com/license.
