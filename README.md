@@ -11,3 +11,6 @@ The logo (description/play-next-button-green-icon.png) is from this website:
 https://uxwing.com/play-next-button-green-icon/
 
 The logo is used within the terms of its license, see https://uxwing.com/license.
+
+# Possible improvements
+- [ ] I wonder if there's a way to make the toolbar icon and menu only show up if you're in LibreOffice Calc. Since this extension fails in any other LibreOffice document, it seems wrong to have the button appear in those modes.
