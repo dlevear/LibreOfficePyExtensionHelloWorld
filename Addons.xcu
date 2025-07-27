@@ -15,8 +15,8 @@
                 calling the org.libreoffice.HelloWorld service.
                 see https://opengrok.libreoffice.org/xref/core/framework/source/uielement/menubarmerger.cxx for the gory details
             -->
-            <node oor:name="org.libreoffice.HelloWorld.menus" oor:op="addafter">
-                <node oor:name="menu1" oor:op="addafter">
+            <node oor:name="org.libreoffice.HelloWorld.menus" >
+                <node oor:name="menu1" >
                     <prop oor:name="MergePoint">
                         <!--
                             File->Print
@@ -31,7 +31,7 @@
                         <value>AddAfter</value>
                     </prop>
                     <node oor:name="MenuItems">
-                        <node oor:name="submenu1" oor:op="addafter">
+                        <node oor:name="submenu1" >
                             <prop oor:name="URL" oor:type="xs:string">
                                 <value>service:org.libreoffice.HelloWorld</value>
                             </prop>
@@ -66,8 +66,8 @@
                 calling the org.libreoffice.HelloWorld service.
                 see https://opengrok.libreoffice.org/xref/core/framework/source/uielement/toolbarmerger.cxx for the gory details
             -->
-            <node oor:name="org.libreoffice.HelloWorld.standardbar" oor:op="addafter">
-                <node oor:name="toolbar1" oor:op="addafter">
+            <node oor:name="org.libreoffice.HelloWorld.standardbar" >
+                <node oor:name="toolbar1" >
                     <prop oor:name="MergeToolBar">
                         <!--
                             see e.g. /usr/lib/libreoffice/share/config/soffice.cfg/modules/swriter/toolbar/standardbar.xml
@@ -81,7 +81,7 @@
                         <value>AddAfter</value>
                     </prop>
                     <node oor:name="ToolBarItems">
-                        <node oor:name="button1" oor:op="addafter">
+                        <node oor:name="button1" >
                             <prop oor:name="URL" oor:type="xs:string">
                                 <value>service:org.libreoffice.HelloWorld</value>
                             </prop>
@@ -99,8 +99,8 @@
                     </node>
                 </node>
             </node>
-            <node oor:name="org.libreoffice.HelloWorld.previewobjectbar" oor:op="addafter">
-                <node oor:name="toolbar1" oor:op="addafter">
+            <node oor:name="org.libreoffice.HelloWorld.previewobjectbar" >
+                <node oor:name="toolbar1" >
                     <prop oor:name="MergeToolBar">
                         <!--
                             see e.g. /usr/lib/libreoffice/share/config/soffice.cfg/modules/swriter/toolbar/previewobjectbar.xml
@@ -114,7 +114,7 @@
                         <value>AddAfter</value>
                     </prop>
                     <node oor:name="ToolBarItems">
-                        <node oor:name="button1" oor:op="addafter">
+                        <node oor:name="button1" >
                             <prop oor:name="URL" oor:type="xs:string">
                                 <value>service:org.libreoffice.HelloWorld</value>
                             </prop>
