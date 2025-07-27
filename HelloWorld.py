@@ -21,7 +21,10 @@ class HelloWorld(unohelper.Base, XJobExecutor, XEventListener):
             uno.Enum('com.sun.star.awt.MessageBoxType', 'WARNINGBOX'),
             uno.getConstantByName("com.sun.star.awt.MessageBoxButtons.BUTTONS_OK"),
             "HelloWorld",
-            "Hello World!").execute()
+            "Hello World! After you click OK, I will write Hello world in cell A1").execute()
+        sheet = self.document.getCurrentController().ActiveSheet
+        sheet.getCellByPosition(0,0).setString("Hello world")
+        return
     # boilerplate code below this point
     def __init__(self, context):
         self.context = context
