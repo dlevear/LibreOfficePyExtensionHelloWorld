@@ -6,13 +6,14 @@
 from zipfile import ZipFile
 import os, os.path, sys
 scriptdir = os.path.dirname(os.path.abspath(sys.argv[0]))
-extensionname = open(
-    os.path.join(scriptdir, 'extensionname.txt')).readlines()[0].rstrip('\n')
-with ZipFile(extensionname, 'w') as tuesdayzip:
+extensionname = os.path.join('build', 'HelloWorld.oxt')
+with ZipFile(extensionname, 'w') as myzip:
     os.chdir(scriptdir)
     for root, dirs, files in os.walk('.'):
         if '.git' in root:
             continue
+        if 'build' in root:
+            continue
         for name in files:
             if not name == extensionname:
-                tuesdayzip.write(os.path.join(root, name))
+                myzip.write(os.path.join(root, name))

@@ -1,21 +1,9 @@
-This file is part of the LibreOffice project.
-
 This Source Code Form is subject to the terms of the Mozilla Public
 License, v. 2.0. If a copy of the MPL was not distributed with this
 file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-The files:
- images/printtuesday_16.bmp
- images/printtuesday_26.bmp
- description/extensionicon_42.png
-where derived from
+The logo (description/play-next-button-green-icon.png) is from this website:
 
- http://cgit.freedesktop.org/libreoffice/core/tree/icon-themes/galaxy/res/lc05509.png
+https://uxwing.com/play-next-button-green-icon/
 
-and are licensed as LGPLv3.
-
-
-This extension is self-contained in that it contains the full source to build
-itself. To do so, unpack the oxt-extension with any program able to read the
-zip format. Running the script './build' in the unpacked source tree, will then
-recreate the extension (and possible modifications).
+The logo is used within the terms of its license, see https://uxwing.com/license.

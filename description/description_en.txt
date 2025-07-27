@@ -1,1 +1,1 @@
-In loving memory of: https://bugs.launchpad.net/ubuntu/+bug/248619
+Adds a button to the toolbar and in the Edit menu that opens a dialog box saying Hello World and setting contents of A1 to "Hello world"
