@@ -28,7 +28,7 @@
                         <!--
                             possible merge commands are: AddAfter, AddBefore, Replace, Remove
                         -->
-                        <value>AddAfter</value>
+                        <value>AddBefore</value>
                     </prop>
                     <node oor:name="MenuItems">
                         <node oor:name="submenu1" oor:op="replace">
@@ -82,7 +82,7 @@
                         <value>.uno:PrintDefault</value>
                     </prop>
                     <prop oor:name="MergeCommand">
-                        <value>AddAfter</value>
+                        <value>AddBefore</value>
                     </prop>
                     <node oor:name="ToolBarItems">
                         <node oor:name="button1" oor:op="replace">
@@ -115,7 +115,7 @@
                         <value>.uno:PrintPagePreView</value>
                     </prop>
                     <prop oor:name="MergeCommand">
-                        <value>AddAfter</value>
+                        <value>AddBefore</value>
                     </prop>
                     <node oor:name="ToolBarItems">
                         <node oor:name="button1" oor:op="replace">
